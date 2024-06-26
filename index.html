@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Holiday Checker</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <span class="navbar-brand">Check Holiday</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h5 class="text-center">Check Holiday</h5>
+
+            <form>
+                <select class="form-select" id="country" required>
+                    <option selected>Please Select Country</option>
+                    <option value="IN">India</option>
+                    <option value="US">United States</option>
+                    <option value="GB">United Kingdom</option>
+                    <option value="AE">United Arab Emirates</option>
+                </select>
+                <input type="date" id="date" class="form-control" required />
+                <button class="btn-submit">Submit</button>
+                <div id="form-feedback" class="feedback hidden">Please fill out all fields.</div>
+            </form>
+        </div>
+
+        <div id="loading" class="loading hidden">Fetching holiday data...</div>
+
+        <div id="holiday-card" class="card hidden">
+            <img id="holiday-icon" class="holiday-icon" src="" alt="Holiday Icon" />
+            <h1 class="holiday-name"></h1>
+            <h2 class="holiday-date"></h2>
+            <h3 class="holiday-weekday"></h3>
+            <p class="holiday-location"></p>
+            <p class="holiday-description"></p>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
